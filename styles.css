@@ -253,8 +253,13 @@ p {
 }
 
 .price {
-    font-size: 1.3em;
-    color: #00b7eb;
+    font-size: 1.8em; /* Aumentando o tamanho */
+    font-weight: bold; /* Negrito */
+    color: #FFD700; /* Amarelo/dourado */
+    background: linear-gradient(to right, #FFD700, #FFEA00); /* Gradiente dourado */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.5); /* Efeito de brilho */
     margin: 10px 0;
 }
 

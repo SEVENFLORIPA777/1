@@ -5,6 +5,8 @@ body {
     background: linear-gradient(to bottom, #000000, #0a1c2b);
     color: #ffffff;
     text-align: center;
+    width: 100%; /* Garantir que o body não ultrapasse a largura da tela */
+    overflow-x: hidden; /* Evitar rolagem horizontal */
 }
 
 .navbar {
@@ -16,6 +18,8 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .nav-links {
@@ -75,6 +79,8 @@ p {
 .intro-section {
     margin: 30px 0;
     padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .intro-section h2 {
@@ -87,14 +93,13 @@ p {
     margin: 8px 0;
 }
 
-/* Estilos pra nova seção de chamada pra ação */
+/* Ajustes na seção de chamada pra ação */
 .cta-section {
     margin: 40px 0;
     padding: 20px 10px;
-    background: #1a1a1a;
-    border: 3px solid #00eaff;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 183, 235, 0.5);
+    background: none; /* Removendo o fundo */
+    border: none; /* Removendo a borda */
+    box-shadow: none; /* Removendo a sombra */
 }
 
 .cta-section h2 {
@@ -133,10 +138,12 @@ p {
 .video-section {
     margin: 40px 0;
     padding: 20px 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .video-section h2 {
-    font-size: 1.8em; /* Aumentando o título pra destacar */
+    font-size: 1.8em;
     margin-bottom: 20px;
 }
 
@@ -149,12 +156,12 @@ iframe {
 .service-details {
     max-width: 90%;
     margin: 20px auto;
-    font-size: 1em; /* Aumentando a fonte pra parecer mais "cheio" */
+    font-size: 1em;
     line-height: 1.5;
-    padding: 15px;
-    border-left: 3px solid #00b7eb;
-    background: rgba(0, 183, 235, 0.1); /* Fundo um pouco mais claro */
-    border-radius: 5px;
+    padding: 0; /* Removendo padding */
+    border: none; /* Removendo borda */
+    background: none; /* Removendo fundo */
+    border-radius: 0; /* Removendo bordas arredondadas */
 }
 
 .service-details p span {
@@ -165,6 +172,8 @@ iframe {
 .features-section {
     margin: 40px 0;
     padding: 20px 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .features-container {
@@ -225,6 +234,8 @@ iframe {
     border: 3px solid #00eaff;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 183, 235, 0.5);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .plans-container {
@@ -258,6 +269,8 @@ iframe {
 .testimonials-section {
     margin: 40px 0;
     padding: 20px 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .swiper-container {
@@ -318,6 +331,8 @@ iframe {
 .faq-section {
     margin: 40px 0;
     padding: 20px 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .faq-container {
@@ -372,6 +387,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .footer-logo {
@@ -449,6 +465,11 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     .nav-links {
         flex-direction: column;
         gap: 10px;
@@ -457,6 +478,7 @@ footer {
     .plans-container, .testimonials-container, .features-container {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     iframe {
@@ -466,10 +488,14 @@ footer {
 
     .intro-section, .cta-section, .video-section, .features-section, .plans-section, .testimonials-section, .faq-section {
         margin: 50px 0;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .service-details {
         margin-bottom: 30px;
+        width: 100%;
+        max-width: 100%;
     }
 
     .plans-section {
@@ -511,6 +537,14 @@ footer {
 
     .cta-button {
         padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .video-section h2 {
+        font-size: 1.5em;
+    }
+
+    .service-details {
         font-size: 0.9em;
     }
 }

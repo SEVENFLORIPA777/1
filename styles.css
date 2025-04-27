@@ -99,7 +99,7 @@ p {
 
 .cta-button {
     display: inline-block;
-    background-color: #25D366; /* Verde do WhatsApp */
+    background-color: #25D366;
     color: white;
     padding: 12px 25px;
     text-decoration: none;
@@ -111,7 +111,7 @@ p {
 }
 
 .cta-button:hover {
-    background-color: #25D366; /* Mantendo verde no hover */
+    background-color: #25D366;
     transform: scale(1.05);
 }
 
@@ -127,8 +127,21 @@ p {
     margin-bottom: 20px;
 }
 
-iframe {
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
     max-width: 100%;
+    margin: 0 auto;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 183, 235, 0.5);
 }
@@ -210,7 +223,7 @@ iframe {
 .plans-section {
     margin: 40px 0;
     padding: 20px 10px;
-    background: none; /* Removendo a "caixa" geral */
+    background: none;
     border: none;
     box-shadow: none;
     width: 100%;
@@ -243,6 +256,59 @@ iframe {
     font-size: 1.3em;
     color: #00b7eb;
     margin: 10px 0;
+}
+
+.certifications {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.certifications li {
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.certification-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #00b7eb;
+    border-radius: 50%;
+    margin-right: 8px;
+    position: relative;
+}
+
+.certification-icon::before {
+    content: '✔';
+    color: white;
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 8px;
+    font-size: 0.9em;
+    transition: transform 0.2s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #25D366;
+    transform: scale(1.05);
 }
 
 .testimonials-section {
@@ -319,24 +385,6 @@ iframe {
 .faq-item p {
     color: #ffffff;
     font-size: 0.9em;
-}
-
-.whatsapp-button {
-    display: inline-block;
-    background-color: #25D366; /* Verde do WhatsApp */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 8px;
-    font-size: 0.9em;
-    transition: transform 0.2s ease;
-}
-
-.whatsapp-button:hover {
-    background-color: #25D366; /* Mantendo verde no hover */
-    transform: scale(1.05);
 }
 
 footer {
@@ -435,9 +483,8 @@ footer {
         width: 100%;
     }
 
-    iframe {
-        width: 100%;
-        height: 180px;
+    .video-container {
+        padding-bottom: 56.25%; /* Mantendo proporção 16:9 */
     }
 
     .intro-section, .cta-section, .video-section, .features-section, .plans-section, .testimonials-section, .faq-section {
@@ -462,6 +509,10 @@ footer {
     .plan {
         width: 100%;
         max-width: 280px;
+    }
+
+    .certifications li {
+        font-size: 0.75em;
     }
 
     .features-container {

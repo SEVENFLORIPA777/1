@@ -92,20 +92,20 @@ iframe {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
-    background: #1a1a1a; /* Fundo do retângulo maior */
-    border: 2px solid #00b7eb; /* Borda neon azul no retângulo maior */
+    background: #1a1a1a;
+    border: 2px solid #00b7eb;
     border-radius: 15px;
-    padding: 20px; /* Padding interno pra espaçar os cards dentro do retângulo */
-    box-shadow: 0 0 20px rgba(0, 183, 235, 0.5); /* Sombra neon */
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 183, 235, 0.5);
 }
 
 .feature {
-    background-color: transparent; /* Remove o fundo individual dos cards */
-    border: none; /* Remove a borda individual dos cards */
-    border-radius: 0; /* Remove o border-radius individual */
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
     padding: 20px;
     width: 200px;
-    box-shadow: none; /* Remove a sombra individual */
+    box-shadow: none;
     transition: transform 0.2s ease;
 }
 
@@ -186,47 +186,38 @@ iframe {
 }
 
 .testimonial {
-    background-color: #1a1a1a;
-    border: 1px solid #00b7eb; /* Mantém a borda neon azul */
-    border-radius: 10px;
-    padding: 20px;
+    background-color: transparent; /* Remove o fundo, já que a imagem tem fundo próprio */
+    border: none; /* Remove a borda do container, a borda será aplicada na imagem */
+    padding: 0; /* Remove padding pra imagem ocupar todo o espaço */
     width: 250px;
-    box-shadow: 0 4px 8px rgba(0, 183, 235, 0.3);
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: none; /* Remove a sombra do container, a sombra será aplicada na imagem */
+    transition: transform 0.2s ease;
 }
 
 .testimonial:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 183, 235, 0.5);
 }
 
-.quote {
-    font-style: italic;
-    color: #e0e0e0;
-    margin-bottom: 15px;
-    position: relative;
+.testimonial-image {
+    width: 100%;
+    height: auto;
+    border: 1px solid #00b7eb; /* Borda neon azul */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 183, 235, 0.3); /* Sombra neon */
+    transition: box-shadow 0.3s ease;
+}
+
+.testimonial-image:hover {
+    box-shadow: 0 6px 12px rgba(0, 183, 235, 0.5); /* Sombra mais forte ao passar o mouse */
+}
+
+/* Removendo estilos de texto que não são mais necessários */
+.quote, .author {
+    display: none; /* Esconde as classes de texto, já que agora usamos imagens */
 }
 
 .quote::before, .quote::after {
-    content: '"';
-    color: #00b7eb;
-    font-size: 1.5em;
-    position: absolute;
-}
-
-.quote::before {
-    left: -10px;
-    top: -5px;
-}
-
-.quote::after {
-    right: -10px;
-    bottom: -5px;
-}
-
-.author {
-    font-weight: bold;
-    color: #00b7eb;
+    display: none;
 }
 
 .whatsapp-button {
@@ -299,7 +290,6 @@ footer {
         margin-bottom: 40px;
     }
 
-    /* Ajuste pra reduzir o tamanho da seção no mobile */
     .plans-section {
         width: 90%;
         margin-left: auto;
@@ -312,7 +302,6 @@ footer {
         max-width: 300px;
     }
 
-    /* Ajuste pro retângulo maior no mobile */
     .features-container {
         width: 90%;
         margin-left: auto;
@@ -321,6 +310,11 @@ footer {
     }
 
     .feature {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .testimonial {
         width: 100%;
         max-width: 300px;
     }

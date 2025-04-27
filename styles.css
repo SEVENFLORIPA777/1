@@ -182,14 +182,15 @@ header p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.testimonial p {
-    font-size: 16px;
-    color: #555;
+.testimonial img {
+    max-width: 100%;
+    border: 5px solid #3498db;
+    border-radius: 8px;
+    margin-top: 10px;
 }
 
-.testimonial .author {
-    font-weight: bold;
-    margin-top: 10px;
+.testimonial a {
+    text-decoration: none;
 }
 
 /* Footer */
@@ -210,12 +211,3 @@ footer .footer-logo {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #25d366;
-    border-radius: 50%;
-    padding: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.whatsapp-fixed img {
-    width: 30px;
-}

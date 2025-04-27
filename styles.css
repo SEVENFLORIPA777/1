@@ -129,7 +129,7 @@ p {
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* Proporção 16:9 */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     max-width: 100%;
@@ -484,7 +484,7 @@ footer {
     }
 
     .video-container {
-        padding-bottom: 56.25%; /* Mantendo proporção 16:9 */
+        padding-bottom: 56.25%;
     }
 
     .intro-section, .cta-section, .video-section, .features-section, .plans-section, .testimonials-section, .faq-section {

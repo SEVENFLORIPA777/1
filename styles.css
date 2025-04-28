@@ -562,4 +562,13 @@ footer {
       background: transparent !important;
       object-fit: cover;
     }
+    /* Ajuste para o título principal */
+.navbar h1 {
+    margin-bottom: 10px !important; /* Reduz o espaço abaixo do título */
+}
+
+/* Ajuste para o subtítulo */
+.intro-section h2 {
+    margin-top: 5px !important; /* Reduz o espaço acima do subtítulo */
+}
 }

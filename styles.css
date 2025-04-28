@@ -557,4 +557,9 @@ footer {
     .service-details {
         font-size: 0.9em;
     }
+    .logo-seven-floripa {
+      border-radius: 50% !important;
+      background: transparent !important;
+      object-fit: cover;
+    }
 }
